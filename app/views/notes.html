@@ -12,16 +12,19 @@
   	<h1>Add Note</h1>
 	</div>
 	<div class="row">
-  	<textarea class="btn-block" ng-model="newNote.txt"></textarea>
+  	<textarea class="btn-block" ng-model="newNote"></textarea>
 	</div>
 	<div class="row">
   	<button class="btn btn-lg btn-primary btn-block" ng-click="saveNote()">Submit</button>
+	</div>
+	<div class="row">
+  	<button class="btn btn-lg btn-primary btn-block" ng-click="removeAll()">Remove All Notes in Storage</button>
 	</div>
 </form>
 
 <div class="row">
 	<div ng-repeat="note in notes">
-		{{note.txt}}
+		{{note}}
 	</div>
 </div>
 
