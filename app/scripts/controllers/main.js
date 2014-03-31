@@ -5,13 +5,14 @@ $scope.newNote = "";
     $scope.notes = ["don't forget to walk the dog", "pick up some pickles on the way home", "why do I always trip over my shoe laces?"];
 	
 	for (var i = 0; i < localStorage.length; i++) {
+		
 		var key = localStorage.key(i);
 	
 		$scope.notes.push(localStorage.getItem(key));
 	}
 
     $scope.saveNote = function(){
-		 localStorage.setItem($.now(), $scope.newNote);
+		 localStorage.setItem(Date.now(), $scope.newNote);
 		 $scope.notes.push($scope.newNote);
 		 $scope.newNote = "";
     }
